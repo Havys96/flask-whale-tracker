@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: flask-whale-tracker
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn webhook_server:app"
